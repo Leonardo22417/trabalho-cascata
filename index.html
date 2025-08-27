@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo de CSS</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header>
+    <h1>Resumo de CSS</h1>
+    <nav>
+      <ul>
+        <li><a href="#cascata">Cascata</a></li>
+        <li><a href="#especificidade">Especificidade</a></li>
+        <li><a href="#combinacao">Combinação</a></li>
+        <li><a href="#pseudo">Pseudo-classes</a></li>
+        <li><a href="#display">Display</a></li>
+        <li><a href="#elementos">Elementos</a></li>
+        <li><a href="#margem">Margin/Padding/Border</a></li>
+        <li><a href="#boxsizing">Box-sizing</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cascata">
+      <h2>Regra da Cascata</h2>
+      <p>O CSS segue a lógica da cascata: primeiro importância, depois especificidade, e por último a ordem do código.</p>
+    </section>
+
+    <section id="especificidade">
+      <h2>Especificidade</h2>
+      <p>Seletor por tag tem menos peso, classe tem peso médio, e id tem o maior peso.</p>
+      <ul>
+        <li><code>p {}</code> → menor prioridade</li>
+        <li><code>.classe {}</code> → prioridade média</li>
+        <li><code>#id {}</code> → prioridade alta</li>
+      </ul>
+    </section>
+
+    <section id="combinacao">
+      <h2>Combinação de Seletores</h2>
+      <p><code>.primeiro h1</code> → seleciona qualquer h1 dentro de .primeiro.</p>
+      <p><code>.primeira > h1</code> → seleciona apenas h1 filho direto de .primeira.</p>
+      <p><code>.primeira h1 + h1</code> → seleciona h1 que vem logo depois de outro h1 dentro de .primeira.</p>
+    </section>
+
+    <section id="pseudo">
+      <h2>Pseudo-classes</h2>
+      <p><code>:first-child</code> → seleciona o primeiro filho.</p>
+      <p><code>:last-child</code> → seleciona o último filho.</p>
+      <p><code>:nth-child(n)</code> → seleciona o filho na posição n.</p>
+      <p><code>:nth-of-type(n)</code> → seleciona o n-ésimo filho do mesmo tipo.</p>
+    </section>
+
+    <section id="display">
+      <h2>Display Inline vs Block</h2>
+      <p>Elementos inline ocupam apenas o conteúdo e não quebram linha. Já os block ocupam a largura toda e quebram linha.</p>
+    </section>
+
+    <section id="elementos">
+      <h2>Elementos Inline e Block</h2>
+      <ul>
+        <li><strong>Inline:</strong> a, span, strong, em, img</li>
+        <li><strong>Block:</strong> div, p, h1-h6, section, header, footer, nav</li>
+      </ul>
+    </section>
+
+    <section id="margem">
+      <h2>Margin, Padding e Border</h2>
+      <p><strong>Margin:</strong> espaçamento externo.</p>
+      <p><strong>Padding:</strong> espaçamento interno.</p>
+      <p><strong>Border:</strong> contorno do elemento.</p>
+      <p><strong>Shorthand:</strong></p>
+      <ul>
+        <li>1 valor → todos os lados</li>
+        <li>2 valores → cima/baixo e lados</li>
+        <li>3 valores → cima, lados, baixo</li>
+        <li>4 valores → cima, direita, baixo, esquerda</li>
+      </ul>
+    </section>
+
+    <section id="boxsizing">
+      <h2>Box-sizing</h2>
+      <div class="exemplo">
+        Este box usa <code>box-sizing: border-box</code>, então padding e border já estão incluídos no tamanho.
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
